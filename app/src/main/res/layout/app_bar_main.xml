@@ -23,8 +23,8 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@drawable/side_nav_bar"
         app:titleTextColor="@android:color/white"
-        app:navigationIconTint="@android:color/black"
-        style="@style/Widget.Material3.Toolbar"
+        app:navigationIconTint="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

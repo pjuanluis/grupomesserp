@@ -1,0 +1,52 @@
+<!-- fragment_folio.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:layout_marginTop="40dp"
+    tools:context=".ui.gallery.FolioFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/ingrese_folio"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Campo de texto alfanumérico -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/folio">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/folioEditText"
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botón de cámara -->
+        <ImageButton
+            android:id="@+id/scanButton"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle_button"
+            android:contentDescription="@string/escanear_folio"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_camera" />
+    </LinearLayout>
+
+</LinearLayout>

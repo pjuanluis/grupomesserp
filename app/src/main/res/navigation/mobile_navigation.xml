@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.grupomess.erp.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_folio"
+        android:name="com.grupomess.erp.ui.gallery.FolioFragment"
+        android:label="@string/menu_new_folio"
+        tools:layout="@layout/fragment_folio" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.grupomess.erp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

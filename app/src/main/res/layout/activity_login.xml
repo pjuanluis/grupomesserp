@@ -17,6 +17,7 @@
 
     <EditText
         android:id="@+id/etEmail"
+        android:autofillHints=""
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:background="@drawable/text_background"

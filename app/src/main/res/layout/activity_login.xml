@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/login_background"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="395dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="@string/logo_mess"
+        android:src="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/text_background"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:autofillHints=""
+        android:hint="@string/contrasenia"
+        android:background="@drawable/text_background"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_background"
+        android:text="@string/iniciar_sesion" />
+
+</LinearLayout>

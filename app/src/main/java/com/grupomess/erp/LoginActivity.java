@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
             String email = etEmail.getText().toString().trim();
             String password = etPassword.getText().toString();
 
-            if(email.equals("admin@demo.com") && password.equals("1234")){
+            if(email.equals("admin@mess.com.mx") && password.equals("1234")){
                 Toast.makeText(LoginActivity.this, "Login exitoso", Toast.LENGTH_SHORT).show();
                 // Ir a la pantalla principal (MainActivity, por ejemplo)
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);

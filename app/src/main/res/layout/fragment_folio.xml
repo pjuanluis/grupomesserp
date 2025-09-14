@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="18dp"
-    android:layout_marginTop="40dp"
+    android:layout_marginTop="60dp"
     tools:context=".ui.gallery.FolioFragment">
 
     <TextView
@@ -31,7 +31,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/folioEditText"
-                android:layout_width="310dp"
+                android:layout_width="300dp"
                 android:layout_height="50dp"
                 android:inputType="text"
                 android:maxLines="1" />
@@ -48,5 +48,42 @@
             android:padding="8dp"
             android:src="@android:drawable/ic_menu_camera" />
     </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/capture_imagenes"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/multiCaptureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/imagenes"
+        android:src="@android:drawable/ic_menu_camera" />
+
+    <TextView
+        android:id="@+id/photosCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fotos_capturadas"
+        android:paddingTop="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photosRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/guardar" />
 
 </LinearLayout>

@@ -15,11 +15,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.grupomess.erp.databinding.ActivityMainBinding;
 
+/**
+ * Actividad principal de la aplicación Grupo Mess ERP.
+ * Gestiona la navegación entre los diferentes fragmentos mediante un Drawer y Navigation Component.
+ * Configura la barra de herramientas, el menú lateral y la navegación superior.
+ * <br>
+ * Flujo principal:
+ * - Inicializa el binding de la vista principal.
+ * - Configura la barra de herramientas y el menú de navegación.
+ * - Define los destinos principales de la navegación.
+ * - Gestiona la navegación entre fragmentos y el menú de opciones.
+ *
+ * @author SOLTICSS
+ */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Configuración de la barra de navegación superior.
+     */
     private AppBarConfiguration mAppBarConfiguration;
+    /**
+     * Binding para acceder a los elementos de la UI principal.
+     */
     private ActivityMainBinding binding;
 
+    /**
+     * Método de ciclo de vida que inicializa la actividad y la navegación.
+     * @param savedInstanceState estado guardado de la actividad
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Infla el menú de opciones en la barra de herramientas.
+     * @param menu menú de opciones
+     * @return true si el menú se creó correctamente
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -55,6 +83,10 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Gestiona la navegación al presionar el botón de navegación superior.
+     * @return true si la navegación fue exitosa
+     */
     @Override
     public boolean onSupportNavigateUp() {
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_content_main);

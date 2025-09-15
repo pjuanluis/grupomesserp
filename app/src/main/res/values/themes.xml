@@ -1,28 +1,40 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.GrupoMessERP" parent="Theme.Material3.Light.NoActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
+    <!-- Tema base para modo oscuro -->
+    <style name="Theme.GrupoMessERP" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Colores principales -->
+        <item name="colorPrimary">#3E5C8A</item> <!-- Azul más claro para destacar -->
+        <item name="colorPrimaryVariant">#2C4A7A</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- Colores secundarios -->
+        <item name="colorSecondary">#4DB6AC</item> <!-- Verde agua elegante -->
+        <item name="colorSecondaryVariant">#00897B</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <!-- Colores de fondo -->
+        <item name="android:colorBackground">#121212</item>
+        <item name="colorSurface">#1E1E1E</item>
+        <item name="colorOnSurface">#E0E0E0</item>
+
+        <!-- Status bar -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Navegación -->
+        <item name="android:navigationBarColor">#121212</item>
     </style>
 
+    <!-- Variantes -->
     <style name="Theme.GrupoMessERP.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Theme.GrupoMessERP.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="Theme.GrupoMessERP.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.GrupoMessERP.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
     <style name="Theme.GrupoMessERP.ToolbarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="colorControlNormal">@android:color/white</item>
     </style>
-
 </resources>

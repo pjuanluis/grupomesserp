@@ -20,7 +20,7 @@
         app:layout_scrollFlags="scroll|enterAlways"
         app:menu="@menu/main"
         app:navigationIconTint="@color/colorSurface"
-        app:popupTheme="@style/Theme.GrupoMessERP"
+        app:popupTheme="@style/Widget.App.PopupMenu"
         app:titleTextColor="@android:color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>

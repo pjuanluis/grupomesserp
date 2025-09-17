@@ -25,7 +25,6 @@
     </style>
     <!-- Estilos de componentes personalizados -->
     <style name="Widget.App.PopupMenu" parent="Widget.Material3.PopupMenu">
-        <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:popupBackground">@drawable/custom_popup_background</item>
     </style>
 

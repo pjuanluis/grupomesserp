@@ -9,7 +9,7 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_new_folio">Nuevo Folio</string>
-    <string name="menu_gallery">Lista de folios</string>
+    <string name="menu_location">Ubicar rack</string>
     <string name="contrasenia">Contraseña</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="email">Correo electrónico</string>

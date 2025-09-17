@@ -16,7 +16,6 @@
         android:theme="@style/Theme.GrupoMessERP" >
         <!-- Login como pantalla principal -->
         <activity android:name=".LoginActivity"
-            android:theme="@style/Theme.GrupoMessERP.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

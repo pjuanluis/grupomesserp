@@ -19,17 +19,24 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
         <item name="android:navigationBarColor">@color/colorBackground</item>
+        <!-- Estilos de componentes -->
+        <item name="popupMenuStyle">@style/Widget.App.PopupMenu</item>
+        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+    </style>
+    <!-- Estilos de componentes personalizados -->
+    <style name="Widget.App.PopupMenu" parent="Widget.Material3.PopupMenu">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:popupBackground">@drawable/custom_popup_background</item>
     </style>
 
-    <!-- Variantes -->
-    <style name="Theme.GrupoMessERP.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="Widget.App.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Toolbar</item>
+        <item name="titleTextColor">?attr/colorOnSurface</item>
+        <item name="subtitleTextColor">?attr/colorOnSurfaceVariant</item>
     </style>
 
-    <style name="Theme.GrupoMessERP.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-    <style name="Theme.GrupoMessERP.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
-    <style name="Theme.GrupoMessERP.ToolbarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="colorControlNormal">@android:color/white</item>
+    <style name="ThemeOverlay.App.Toolbar" parent="ThemeOverlay.Material3.Toolbar.Surface">
+        <item name="colorOnSurface">?attr/colorOnPrimary</item>
+        <item name="actionMenuTextColor">?attr/colorOnPrimary</item>
     </style>
 </resources>

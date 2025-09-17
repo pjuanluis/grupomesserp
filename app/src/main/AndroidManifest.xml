@@ -26,6 +26,7 @@
 
         <!-- Tu actividad principal normal -->
         <activity android:name=".MainActivity" />
+        <activity android:name=".ChangePasswordActivity" />
     </application>
 
 </manifest>

@@ -25,4 +25,15 @@
     <string name="fotos_capturadas">Fotos capturadas: 0</string>
     <string name="guardar">Guardar</string>
     <string name="eliminar_foto">Eliminar foto</string>
+    <string name="contrasena_actual">Contraseña actual</string>
+    <string name="nueva_contrasena">Nueva contraseña</string>
+    <string name="confirmar_contrasena">Confirmar contraseña</string>
+    <string name="cambiar_contrasena">Cambiar contraseña</string>
+    <string name="password_mismatch">La nueva contraseña y la confirmación no coinciden</string>
+    <string name="password_change_success">Contraseña cambiada exitosamente</string>
+    <string name="password_change_failure">Error al cambiar la contraseña. Por favor, inténtelo de nuevo.</string>
+    <string name="login_failure">Error de inicio de sesión. Por favor, verifique sus credenciales.</string>
+    <string name="empty_fields">Por favor, complete todos los campos.</string>
+    <string name="cambio_psw">Cambiar contraseña</string>
+    <string name="logout">Cerrar sesión</string>
 </resources>

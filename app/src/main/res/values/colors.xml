@@ -10,5 +10,8 @@
     <color name="grey_50">#E3E3E3</color>
     <color name="loginBackground">#1E3A5F</color>
     <color name="buttonLogin">#5DA9E9</color>
-
+    <color name="popup_background">#2C2C2C</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSurface">#F5F5F5</color>
+    <color name="colorOnSurface">#000000</color>
 </resources>

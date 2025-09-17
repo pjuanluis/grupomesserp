@@ -1,13 +1,16 @@
 package com.grupomess.erp;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -29,7 +32,6 @@ import com.grupomess.erp.databinding.ActivityMainBinding;
  * @author SOLTICSS
  */
 public class MainActivity extends AppCompatActivity {
-
     /**
      * Configuración de la barra de navegación superior.
      */
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
     /**
-     * Método de ciclo de vida que inicializa la actividad y la navegación.
+     * Metodo de ciclo de vida que inicializa la actividad y la navegación.
      * @param savedInstanceState estado guardado de la actividad
      */
     @Override
@@ -94,4 +96,63 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    /**
+     * Maneja la selección de elementos del menú de opciones.
+     * @param item elemento del menú seleccionado
+     * @return true si el elemento fue manejado correctamente
+     */
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            // Abrir pantalla para cambiar contraseña
+            Intent intent = new Intent(this, ChangePasswordActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.action_logout) {
+            // Lógica para cerrar sesión
+            cerrarSesion();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Cierra la sesión del usuario actual.
+     * Realiza las siguientes acciones:
+     * - Limpia los datos de SharedPreferences
+     * - Limpia la pila de actividades
+     * - Redirige al usuario a la pantalla de login
+     */
+    private void cerrarSesion() {
+        try {
+            // Limpiar datos de sesión
+            SharedPreferences prefs = getSharedPreferences("mis_pref", MODE_PRIVATE);
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.clear();
+            editor.apply();
+            this.getCacheDir().delete();
+
+            // Regresar al LoginActivity limpiando la pila de actividades
+            Intent intent = new Intent(this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
+                        | Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            finish();
+        } catch (Exception e) {
+            Log.e(this.getClass().getSimpleName(), "Error al cerrar sesión: " + e.getMessage(), e);
+            Intent intent = new Intent(this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        }
+    }
+
+
+
+
 }

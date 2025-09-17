@@ -3,7 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_settings"
+        android:title="@string/cambio_psw"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/logout"
+        android:orderInCategory="101"
         app:showAsAction="never" />
 </menu>
